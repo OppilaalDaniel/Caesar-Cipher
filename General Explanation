@@ -1,0 +1,30 @@
+In cryptography "Caesar Cipher"  is one of the most simplest and widely known encryption technique.
+It is also known as "Shift Cipher" as it shifts either left or right based on the key.
+This method is used to encrypt the simple plain text.
+It is named after Julius Caesar who used it in his times.
+
+It consistes of three parts in general. They are
+1. Plain text (the original message without encryption)
+2. Key (the number or password which is used to find the crypted message)
+3. Cipher text (the encrypted message)
+
+In this method,
+1. First we assign numbers to the alphabets starting from either 0 or 1 according to our interest.
+a b c d e f g h i j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z 
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+
+2. Then we also provide the key/password which is usually a number which is used to encrypt the mesage.
+if for example: key =2 (right shift)
+
+3. Now for an instance lets take a plain text alphabet q
+it is provided with the number 16
+according to the key given to us we have to shift it 2 positions right
+we will bw getting (16+2)=18 which is "s" --> the cipher text.
+
+we also have formulas to encrypt amd decrypt the text given to us
+c= (x+n) mod 26
+c= (x-n) mod 26
+where,
+c - is the place value of encrypted letter
+n - is the key/passowrd which denotes how much places we shouls shift left or right
+x - place value of the actual letter
