@@ -1,0 +1,31 @@
+Coding for caesar cipher in python 3.
+#Own creation
+
+def encrypt(plain_text,key): 
+	cipher_text = ""                                           %cipher_text denotes the encrypted text
+	for i in range(len(plain_text)): 
+		char = plain_text[i]                                     %denotes each character in the string                                  
+		if (char.isupper()): 
+			cipher_text+=chr((ord(char)+key-65)%26+65)             %ord() function is used to find the ascii value of the character based on their cases
+		else:                                                    %used for upper and lowercase letters to be encrypted
+			cipher_text+=chr((ord(char)+key-97)%26+97) 
+	return cipher_text 
+plain_text = "CAESARCIPHER"                                  %plain_text chn be changed accordingly in capital or small letters based on our preference     
+key = 3                                                      %key can also be changed accordingly ( it may be either a positive or negative integer)  
+print("Text : " + plain_text)
+print("Key : " + str(key))
+print("Cipher: " + encrypt(plain_text,key))
+
+
+'''
+giving positive integer denotes "RIGHT SHIFT"
+giving negative integer denotes "LEFT SHIFT" 
+for eg: 
+plain_test--> a
+key--> -3            key--> 3
+cipher_text--> x     cipher_text--> d
+
+In the same way the text can be either lowercase or uppercase the encrypted string will be provided.
+Note: Use texts without spaces in between to be more encrypted.
+'''
+         
